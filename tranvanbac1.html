@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>L.O.C</title>
+  <style media="screen">
+  .message_container {
+    max-width: 1000px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    }
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+    .message_screen {
+      padding: 15px 10px;
+    }
+    .bot_item {
+      margin-left: 35px;
+    }
+    audio{
+      width: 250px;
+    }
+    video{
+      margin-top:2px;
+      margin-bottom:2px;
+      max-width: 450px;
+    }
+    img {
+      margin-top:2px;
+      margin-bottom:2px;
+      width: 75%;
+      max-width: 450px;
+    }
+    .message__list {
+      padding: 0;
+      margin: 10px 0px 10px 0px;
+      list-style: none;
+      width: 100%;
+      position: relative;
+    }
+    .message__list:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .message__item {
+      max-width: 50%;
+      clear: both;
+    }
+    .message__item--bot {
+      float: left;
+    }
+    .message__item--bot:first-of-type .message {
+      border-top-left-radius: 20px;
+    }
+    .message__item--bot:last-of-type .message {
+      border-bottom-left-radius: 20px;
+    }
+    .message__item--user {
+      float: right;
+      text-align: right;
+    }
+    .message__item--user:first-of-type .message {
+      border-top-right-radius: 20px;
+    }
+    .message__item--user:last-of-type .message {
+      border-bottom-right-radius: 20px;
+    }
+    .message {
+      padding: 8px 15px;
+      margin-top:2px;
+      margin-bottom:2px;
+      display: inline-block;
+      text-align: left;
+      max-width: 440px;
+      overflow-wrap: break-word;
+    }
+    .message--bot {
+      background-color: #eee;
+      border-radius: 3px 20px 20px 3px;
+      margin-left: 35px;
+    }
+    .message--user {
+      background-color: #0baaff;
+      color: #fff;
+      border-radius: 20px 3px 3px 20px;
+    }
+    .bot__image {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      bottom: 17px;
+      left: 0;
+      border-radius: 20px;
+    }
+    .sticker{
+      max-width: 180px;
+    }
+    .bot--timer {
+      padding-left: 45px;
+    }
+    .timer {
+      font-size: smaller;
+    }
+
+  </style>
+  </head>
+  <body>
+  <div class="message_container">
+    <div class="message_screen">
+      <div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Bạn đã bỏ lỡ cuộc gọi của Bắc.</span>
+      <div class="timer bot--timer">November 2, 2022 5:31 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Gì đấy Bắc</span>
+      <div class="timer">November 2, 2022 5:36 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Hehe<br />Thấy nhớ Ông nên gọi chút thôi<br />😁😁😁</span>
+      <div class="timer bot--timer">November 2, 2022 5:38 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Hảo :))</span>
+      <div class="timer">November 2, 2022 5:38 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">http://esp32/</span>
+      <div class="timer bot--timer">January 14, 2023 5:06 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Ok</span>
+      <div class="timer">January 14, 2023 5:13 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">.</span>
+      <div class="timer">January 31, 2023 12:49 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Bạn đã bỏ lỡ lần chat video với Bắc.</span>
+      <div class="timer bot--timer">January 31, 2023 12:49 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">...</span>
+      <div class="timer">January 31, 2023 12:49 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">.....</span>
+      <div class="timer bot--timer">January 31, 2023 12:49 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">...</span>
+      <div class="timer">January 31, 2023 12:50 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">s.substr(0, 5)</span>
+      <div class="timer">February 1, 2023 4:36 PM</div></div><div class="message__item message__item--user">
+          <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft59.2708-21%2F330755506_853188532432687_6987286249695289978_n.html%2FTr%25E1%25BA%25A7n-V%25C4%2583n-B%25E1%25BA%25AFc.html%3F_nc_cat%3D110%26ccb%3D1-7%26_nc_sid%3D0cab14%26_nc_ohc%3DfgdAcrgkbLMAX_3l0I9%26_nc_ht%3Dcdn.fbsbx.com%26oh%3D03_AdRTaBy0aU1yKX_-ALO3w_yGhkKG1M9aIqpVfX-RSGPHlA%26oe%3D6434E368%26dl%3D1&h=AT2CLHW9n9G1lO6Sq0YB2Dpca2-HMp37HujRp_3s9R0GHV6B2QUCWQ-LPZ0vuK4Fr6cilMrN53RFzLt6xmNiTEThtU9DZyuMEr4k4cx2QH9A2MCPte1GgqC_l4cE4Nc6H3xH1x1GFLGR4lXG-aCSOYimTKuZhCTr&s=1" target="_blank"><span class="message message--user">(↓) Trần Văn Bắc.html</span></a>
+          <div class="timer">February 11, 2023 11:42 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+          <a class="bot_item" href="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.15752-9/330853262_718281093006852_2490371868519318310_n.png?stp=dst-png_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=T7lqNAq0qBgAX9ZS0Eh&_nc_ht=scontent.fhan14-4.fna&oh=03_AdSkGlr2Gx-GnQD5SA2Fcpuh1YudO1JK46_extwQVSyABA&oe=645A9C48" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.15752-9/330853262_718281093006852_2490371868519318310_n.png?stp=dst-png_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=T7lqNAq0qBgAX9ZS0Eh&_nc_ht=scontent.fhan14-4.fna&oh=03_AdSkGlr2Gx-GnQD5SA2Fcpuh1YudO1JK46_extwQVSyABA&oe=645A9C48"></a>
+          <div class="timer bot--timer">February 15, 2023 5:08 PM</div></div><div class="message__item message__item--bot">
+      <span class="message message--bot">kbfj;ìv</span>
+      <div class="timer bot--timer">February 25, 2023 9:03 PM</div></div><div class="message__item message__item--bot">
+      <span class="message message--bot">Nhiều</span>
+      <div class="timer bot--timer">February 25, 2023 9:04 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Xin chào bạn! Cảm ơn bạn đã liên hệ đến mình!<br />Khi đọc được tin nhắn của bạn, mình sẽ trả lời sớm nhất có thể!<br />Chúc bạn một ngày nhiều niềm vui và may mắn!<br />Liên hệ thêm gmail của mình nếu cần thiết nhé!<br />thanhquan23122003@gmail.com (Auto reply :|])</span>
+      <div class="timer">February 25, 2023 9:04 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Alo</span>
+      <div class="timer bot--timer">February 25, 2023 9:05 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Xin chào bạn! Cảm ơn bạn đã liên hệ đến mình!<br />Khi đọc được tin nhắn của bạn, mình sẽ trả lời sớm nhất có thể!<br />Chúc bạn một ngày nhiều niềm vui và may mắn!<br />Liên hệ thêm gmail của mình nếu cần thiết nhé.<br />thanhquan23122003@gmail.com (Auto reply :|])</span>
+      <div class="timer">February 25, 2023 9:05 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Alo Quân</span>
+      <div class="timer bot--timer">February 25, 2023 9:05 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Xin chào bạn! Cảm ơn bạn đã liên hệ đến mình!<br />Khi đọc được tin nhắn của bạn, mình sẽ trả lời sớm nhất có thể!<br />Chúc bạn một ngày nhiều niềm vui và may mắn!<br />Liên hệ thêm gmail của mình nếu cần thiết nhé.<br />thanhquan23122003@gmail.com (Auto reply :|])</span>
+      <div class="timer">February 25, 2023 9:05 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">kdgwkueyfcksudfc Alo jdyweouwfegc</span>
+      <div class="timer bot--timer">February 25, 2023 9:05 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Xin chào bạn! Cảm ơn bạn đã liên hệ đến mình!<br />Khi đọc được tin nhắn của bạn, mình sẽ trả lời sớm nhất có thể!<br />Chúc bạn một ngày nhiều niềm vui và may mắn!<br />Liên hệ thêm gmail của mình nếu cần thiết nhé.<br />thanhquan23122003@gmail.com (Auto reply :|])</span>
+      <div class="timer">February 25, 2023 9:05 PM</div></div><div class="message__item message__item--user">
+          <a href="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/333299983_143345208320777_1009061708931057333_n.png?stp=dst-png_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=c9gkqbyOQFcAX_ny6cu&_nc_ht=scontent.fhan14-3.fna&oh=03_AdRbzo95LE5q2x77_e_qC16hJzU9HyIYGeqjKVR0CerEPQ&oe=645A9DF3" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/333299983_143345208320777_1009061708931057333_n.png?stp=dst-png_p480x480&_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=c9gkqbyOQFcAX_ny6cu&_nc_ht=scontent.fhan14-3.fna&oh=03_AdRbzo95LE5q2x77_e_qC16hJzU9HyIYGeqjKVR0CerEPQ&oe=645A9DF3"></a>
+          <div class="timer">February 28, 2023 5:28 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Đề vào câu nào đó</span>
+      <div class="timer bot--timer">March 9, 2023 10:42 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Câu 1 là tiền tệ</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Câu 2 là dạng 2</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Câu 3 là thể chế kinh tế thị trường VN</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Rứa có qua không</span>
+      <div class="timer bot--timer">March 9, 2023 10:43 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Chắc quá</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Chắc qua</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Chép đc k</span>
+      <div class="timer bot--timer">March 9, 2023 10:43 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Không chép được mấy</span>
+      <div class="timer">March 9, 2023 10:43 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Thế bài tập</span>
+      <div class="timer bot--timer">March 9, 2023 10:44 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Bài tập làm được hết</span>
+      <div class="timer">March 9, 2023 10:44 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Thế qua r</span>
+      <div class="timer bot--timer">March 9, 2023 10:44 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Chắc thế</span>
+      <div class="timer">March 9, 2023 10:45 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Xem điểm matlab chưa</span>
+      <div class="timer">March 22, 2023 10:34 AM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Bắc có điểm matlab chưa</span>
+      <div class="timer">March 22, 2023 10:36 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+          <a class="bot_item" href="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.15752-9/336590925_923635605734079_2152668229101170547_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=8qIFMqXtoxQAX9UijqZ&_nc_ht=scontent.fhan14-4.fna&oh=03_AdRTq0oLqiwOoCzCcDEp2rW-gYNiMP4U1zQBMoXicDIh-A&oe=645A9794" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.15752-9/336590925_923635605734079_2152668229101170547_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=8qIFMqXtoxQAX9UijqZ&_nc_ht=scontent.fhan14-4.fna&oh=03_AdRTq0oLqiwOoCzCcDEp2rW-gYNiMP4U1zQBMoXicDIh-A&oe=645A9794"></a>
+          <div class="timer bot--timer">March 22, 2023 11:51 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+          <a href="https://www.facebook.com/nghetinhbachkhoa/posts/pfbid02SiwWLhPZDJargd712D449NVwJk8XH5KEGjWtVqPUpva7nwmXW4LU3rK6eeb3jcQyl" target="_blank"><img src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/338425728_742445624253561_5964879600754041176_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=5F_wHXK9WFkAX-k7D1s&_nc_ht=scontent.fhan14-4.fna&oh=00_AfD9kAgfKmEuR4zXzdzClW9Xrc0Gl9OCI-TOjIGuGI0n0w&oe=643783D6"></a>
+          </div><div class="message__item message__item--user">
+          <span class="message message--user"></span>
+          <div class="timer">March 30, 2023 6:05 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">https://voicegpt.us/auth/login<br />tranvanbac021103@gmail.com<br />North@12345678</span>
+      <div class="timer bot--timer">March 31, 2023 9:25 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">https://www.facebook.com/profile.php?id=100054317023326</span>
+      <div class="timer">April 1, 2023 12:58 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">/ask Hello</span>
+      <div class="timer">April 1, 2023 12:58 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+          <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft59.2708-21%2F241742266_690665908567162_2917927775656051743_n.pdf%2FH%25E1%25BB%2587-th%25E1%25BB%2591ng-c%25C3%25A2u-h%25E1%25BB%258Fi-tr%25E1%25BA%25AFc-nghi%25E1%25BB%2587m.pdf%3F_nc_cat%3D108%26ccb%3D1-7%26_nc_sid%3D0cab14%26_nc_ohc%3Dz5v1uhVt4qoAX-_xiAf%26_nc_ht%3Dcdn.fbsbx.com%26oh%3D03_AdR7aHMMDRf6mnPy8zIYy9ukxi3OKDBUAg7v94zoVWZJeg%26oe%3D6434B665%26dl%3D1&h=AT3RuE1Q2_7myTcehV2sgKG-SBvLJyUSG7HwHXluRZUw8Tpz0GWBR8yBEdRgnFcaBqf0b5-eIxWbniQJdewFczxyF6O1KB4UwFH83mHXxOxrspnMa4wMZHGuDVf1vV2LcNS--jKGcI_VCOhKNUOywQIieh0b2xUU&s=1" target="_blank"><span class="message message--bot">(↓) Hệ thống câu hỏi trắc nghiệm.pdf</span></a>
+          <div class="timer bot--timer">April 4, 2023 11:00 PM</div></div><div class="message__item message__item--bot">
+          <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft59.2708-21%2F240938278_3003577226589087_5839447342764637944_n.pdf%2FTEST-FORM-PDF.pdf%3F_nc_cat%3D104%26ccb%3D1-7%26_nc_sid%3D0cab14%26_nc_ohc%3DMQgGwqEh46UAX82X2if%26_nc_ht%3Dcdn.fbsbx.com%26oh%3D03_AdRLzb8s4Nhm7uS_fNxhYTX1dhKlrugNQ8bYBTSAvncE6Q%26oe%3D643505EE%26dl%3D1&h=AT0fBP_69wvmmHqR51OXzHiqSCG-fK8bYejpJHKFqIWYdvMBPn_e-gc8cqcZoiqe71a9i-t4I-n143tWCcxmXea0iFp3Kc9CSLBO-ZvLwWH4lvR5s4gnTCl07ij4xajhClJiQ_qEEC8yaMSX8jgKxOn3kWMpitkE&s=1" target="_blank"><span class="message message--bot">(↓) TEST FORM PDF.pdf</span></a>
+          <div class="timer bot--timer">April 4, 2023 11:00 PM</div></div><div class="message__item message__item--bot">
+      <span class="message message--bot">Quân đi hk về chưa</span>
+      <div class="timer bot--timer">April 6, 2023 9:53 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Rồi</span>
+      <div class="timer">April 6, 2023 9:53 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Lấy hàng cho Bắc vs Nam <br />và đc ko <br />Bắc Mì 77k <br />Nam thì ko rõ lắm</span>
+      <div class="timer bot--timer">April 6, 2023 9:53 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Nam đang ở phòng mà</span>
+      <div class="timer">April 6, 2023 9:54 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Vậy gọi nó xuống lấy hàng luôn <br />Bắc nt cho nó mà ko đc <br />Tưởng là đi học rồi</span>
+      <div class="timer bot--timer">April 6, 2023 9:54 AM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Rồi nha Bắc</span>
+      <div class="timer">April 6, 2023 9:56 AM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Quân ơi cứu bạn với</span>
+      <div class="timer bot--timer">April 7, 2023 2:26 PM</div></div><div class="message__item message__item--bot">
+          <a class="bot_item" href="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.15752-9/339728083_605838454762313_485907882034149738_n.jpg?stp=dst-jpg_p480x480&_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=pKRa0abSE-kAX9MTQDt&_nc_ht=scontent.fhan14-1.fna&oh=03_AdQCxXUXJuWQDD_TxJ5pUZIhIFpEqpv65tN9vt97o3aT8w&oe=645A9A0B" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.15752-9/339728083_605838454762313_485907882034149738_n.jpg?stp=dst-jpg_p480x480&_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=pKRa0abSE-kAX9MTQDt&_nc_ht=scontent.fhan14-1.fna&oh=03_AdQCxXUXJuWQDD_TxJ5pUZIhIFpEqpv65tN9vt97o3aT8w&oe=645A9A0B"></a>
+          <div class="timer bot--timer">April 7, 2023 2:26 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">:v</span>
+      <div class="timer">April 7, 2023 2:26 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Ny Quân</span>
+      <div class="timer">April 7, 2023 2:26 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Biết mà</span>
+      <div class="timer bot--timer">April 7, 2023 2:26 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Thế có hỏi gì không</span>
+      <div class="timer">April 7, 2023 2:27 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+          <a class="bot_item" href="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.15752-9/339946846_3414879148786351_8273538112858377940_n.jpg?stp=dst-jpg_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4ja3R_xJWy4AX9NywAf&_nc_ht=scontent.fhan14-1.fna&oh=03_AdTVq_e3Xkab82F82TjYK_AjcUaCvgPBPUBqMFbOnRj5Lg&oe=645A79DD" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.15752-9/339946846_3414879148786351_8273538112858377940_n.jpg?stp=dst-jpg_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4ja3R_xJWy4AX9NywAf&_nc_ht=scontent.fhan14-1.fna&oh=03_AdTVq_e3Xkab82F82TjYK_AjcUaCvgPBPUBqMFbOnRj5Lg&oe=645A79DD"></a>
+          <div class="timer bot--timer">April 7, 2023 2:28 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">:v Quân sáng giờ ngủ quên</span>
+      <div class="timer">April 7, 2023 2:28 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Máy hết pin</span>
+      <div class="timer">April 7, 2023 2:28 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Chết mịa M Quân ơi<br />M đã làm gì <br />Quân Fuckboi nha</span>
+      <div class="timer bot--timer">April 7, 2023 2:28 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Nãy dậy thấy gọi nhỡ cả đống</span>
+      <div class="timer">April 7, 2023 2:28 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">Chắc là hỏi xem Quân làm gì cũng nên</span>
+      <div class="timer">April 7, 2023 2:29 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+      <span class="message message--bot">Ukm</span>
+      <div class="timer bot--timer">April 7, 2023 2:29 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Ny Quân có hỏi gì không Bắc</span>
+      <div class="timer">April 7, 2023 2:39 PM</div></div></div><div class="message__list"><img class="bot__image" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t1.6435-1/175348562_279066023769676_3746466207184375856_n.jpg?stp=c0.0.80.80a_cp0_dst-jpg_p80x80&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6gqxtNWxGw4AX9J2QcX&_nc_ht=scontent.fhan14-4.fna&oh=00_AfDTHlVJuk6x7p26zpnME4Y1vAWT1yDcdbYO-bN0YK6pAA&oe=645A8CE5"><div class="message__item message__item--bot">
+          <a class="bot_item" href="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/339948336_1360542448059707_8390423614178296469_n.jpg?stp=dst-jpg_p480x480&_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FaXfybALRO0AX_JMUj9&_nc_ht=scontent.fhan14-2.fna&oh=03_AdS37RY7frNKAunPeiOgGYmBU00GR4EGQJVsEr9171VAxA&oe=645A7EE4" target="_blank"><img class="nonsticker" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/339948336_1360542448059707_8390423614178296469_n.jpg?stp=dst-jpg_p480x480&_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FaXfybALRO0AX_JMUj9&_nc_ht=scontent.fhan14-2.fna&oh=03_AdS37RY7frNKAunPeiOgGYmBU00GR4EGQJVsEr9171VAxA&oe=645A7EE4"></a>
+          <div class="timer bot--timer">April 7, 2023 2:39 PM</div></div><div class="message__item message__item--bot">
+      <span class="message message--bot">Ko nựa đâu</span>
+      <div class="timer bot--timer">April 7, 2023 2:39 PM</div></div><div class="message__item message__item--bot">
+      <span class="message message--bot">Bắc đã đặt biệt danh cho bạn là Quân FuckBoy.</span>
+      <div class="timer bot--timer">April 7, 2023 2:39 PM</div></div></div><div class="message__list"><div class="message__item message__item--user">
+      <span class="message message--user">Oke Bắc</span>
+      <div class="timer">April 7, 2023 2:40 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">https://www.facebook.com/watch/?v=524756773064410</span>
+      <div class="timer">April 9, 2023 11:18 PM</div></div><div class="message__item message__item--user">
+      <span class="message message--user">M có ngá mồm không?<br />Tau mới mua quả vịt lộn giừ chấm với đọi xúp nựa là vưa</span>
+      <div class="timer">April 9, 2023 11:20 PM</div></div>
+    </div>
+  </div>
+  </body>
+  </html>
